@@ -1,0 +1,26 @@
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
+    encoding: "@project.build.sourceEncoding@"
+  java:
+      version: "@java.version@"
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:monitored
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+management:
+  endpoint:
+    health:
+      show-details: always
+
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
